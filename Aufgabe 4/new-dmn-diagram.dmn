@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="Definitions_0mlqj1d" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Web Modeler" exporterVersion="de817ed" camunda:diagramRelationId="c290bd07-e28d-44f3-b7a0-7efd019df10f" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.1.0">
+  <decision id="Decision_1nybpd6" name="Decision 1">
+    <informationRequirement id="InformationRequirement_120dm7j">
+      <requiredInput href="#InputData_1fgac6a" />
+    </informationRequirement>
+    <informationRequirement id="InformationRequirement_0eel87y">
+      <requiredInput href="#InputData_1yn4dyo" />
+    </informationRequirement>
+    <decisionTable id="DecisionTable_11k0bxl" hitPolicy="COLLECT" aggregation="SUM">
+      <input id="Input_1" label="Land" biodi:width="183">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text>Land</text>
+        </inputExpression>
+        <inputValues id="UnaryTests_0l3gs3g">
+          <text>"Hamburg","Bremen","Niedersachsen","Schleswig-Holstein"</text>
+        </inputValues>
+      </input>
+      <input id="InputClause_0trj07m" label="Anzahl Anhänger">
+        <inputExpression id="LiteralExpression_0os7v4q" typeRef="number">
+          <text>Anzahl</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" name="Kosten" typeRef="number" />
+      <rule id="DecisionRule_06c61nh">
+        <inputEntry id="UnaryTests_17vgj6j">
+          <text>"Hamburg","Bremen","Niedersachsen","Schleswig-Holstein"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ujfrgz">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0oftwub">
+          <text>100</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0qh2ptl">
+        <inputEntry id="UnaryTests_1pipkce">
+          <text>"Niederlande","Dänemark"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_15sr3hu">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1uydnyt">
+          <text>200</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1ojkgzd">
+        <inputEntry id="UnaryTests_1ezzh7f">
+          <text>not("Hamburg","Bremen","Niedersachsen","Schleswig-Holstein","Niederlande","Dänemark")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0szrizk">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_05qty5b">
+          <text>150</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0owt2zm">
+        <inputEntry id="UnaryTests_1q2ekoe">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1e3wrt3">
+          <text>1</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1pobijo">
+          <text>150</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0fxxcda">
+        <inputEntry id="UnaryTests_0dqmvtm">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19nmi4x">
+          <text>2</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1k4omgd">
+          <text>300</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0od6m5d">
+        <inputEntry id="UnaryTests_0yjdlgw">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0afovhl">
+          <text>3</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ivplcq">
+          <text>450</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0krdtay">
+        <inputEntry id="UnaryTests_1f47if4">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_00zn676">
+          <text>4</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1upgkeo">
+          <text>600</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <inputData id="InputData_1yn4dyo" name="Land" />
+  <inputData id="InputData_1fgac6a" name="Anzahl Anhänger" />
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="Decision_1nybpd6">
+        <dc:Bounds height="80" width="180" x="240" y="100" />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_0zwb592" dmnElementRef="InputData_1yn4dyo">
+        <dc:Bounds height="45" width="125" x="158" y="278" />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_0k7cjtp" dmnElementRef="InputData_1fgac6a">
+        <dc:Bounds height="45" width="125" x="388" y="268" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_0e9o0f0" dmnElementRef="InformationRequirement_120dm7j">
+        <di:waypoint x="451" y="268" />
+        <di:waypoint x="360" y="200" />
+        <di:waypoint x="360" y="180" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="DMNEdge_1fju2jf" dmnElementRef="InformationRequirement_0eel87y">
+        <di:waypoint x="221" y="278" />
+        <di:waypoint x="300" y="200" />
+        <di:waypoint x="300" y="180" />
+      </dmndi:DMNEdge>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

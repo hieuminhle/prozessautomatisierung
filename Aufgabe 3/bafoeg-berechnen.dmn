@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="Definitions_0s53cpq" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Web Modeler" exporterVersion="de817ed" camunda:diagramRelationId="56b3c8f1-69e6-44b8-8577-8614928fe7ec" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.1.0">
+  <decision id="Decision_1gz2006" name="Decision 1">
+    <informationRequirement id="InformationRequirement_1nw9nfn">
+      <requiredInput href="#InputData_09hfkv7" />
+    </informationRequirement>
+    <informationRequirement id="InformationRequirement_064pb7v">
+      <requiredInput href="#InputData_0c1kmli" />
+    </informationRequirement>
+    <informationRequirement id="InformationRequirement_0egmpc9">
+      <requiredInput href="#InputData_030ouxn" />
+    </informationRequirement>
+    <informationRequirement id="InformationRequirement_1b3eyvm">
+      <requiredInput href="#InputData_1lbtf75" />
+    </informationRequirement>
+    <decisionTable id="DecisionTable_18sbhhn" hitPolicy="COLLECT" aggregation="SUM">
+      <input id="Input_1" label="Alter" biodi:width="150">
+        <inputExpression id="InputExpression_1" typeRef="number">
+          <text>Alter</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1tsrfed" label="Einkommen" biodi:width="163">
+        <inputExpression id="LiteralExpression_1ei02fo" typeRef="number">
+          <text>Einkommen</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1rigopn" label="Einkommen Vater">
+        <inputExpression id="LiteralExpression_1nfz6ph" typeRef="number">
+          <text>EinkommenVater</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_098b3vy" label="Einkommen Mutter">
+        <inputExpression id="LiteralExpression_0l9gwg3" typeRef="number">
+          <text>EinkommenMutter</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="Bafoeg Erhoehung" name="BafoegErhoehung" typeRef="number" />
+      <rule id="DecisionRule_1cxikkd">
+        <inputEntry id="UnaryTests_0zye47n">
+          <text>&lt;25</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_170qm6k">
+          <text>&lt;450</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1hnta57">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0e1tfyu">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0bwxdgr">
+          <text>200</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0jsky9n">
+        <inputEntry id="UnaryTests_1hrk2wa">
+          <text>&gt;=25</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_01ciwjc">
+          <text>&lt;450</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ogx9ji">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_08pm0bo">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_025uvrm">
+          <text>150</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_061bz8p">
+        <inputEntry id="UnaryTests_0dg5gph">
+          <text>&lt;25</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0r9yvs1">
+          <text>&gt;=450</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_164m6us">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1qplz5x">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0m7xzru">
+          <text>80</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1rrj2wm">
+        <inputEntry id="UnaryTests_1i50zyv">
+          <text>&gt;=25</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1r8my2d">
+          <text>&gt;=450</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0uz1qyt">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1vcwfio">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1srw6ts">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1d5rg26">
+        <inputEntry id="UnaryTests_1syvt63">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1si5s0c">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1nw3cp6">
+          <text>&lt;2500</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_13ondxy">
+          <text>&lt;2500</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1i84i8f">
+          <text>200</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1tkt93w">
+        <inputEntry id="UnaryTests_1jn45u3">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_03ewhve">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0kx9haq">
+          <text>&lt;2500</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0a90re3">
+          <text>&gt;=2500</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0710s5g">
+          <text>100</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_13u5fwn">
+        <inputEntry id="UnaryTests_15x4tym">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_18dejqk">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_195wo0u">
+          <text>&gt;=2500</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ovyf88">
+          <text>&lt;2500</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0oi91rd">
+          <text>100</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_114lgar">
+        <inputEntry id="UnaryTests_0sma5b8">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_00dell0">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0t8ctgp">
+          <text>&gt;=2500</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_15xz5ku">
+          <text>&gt;=2500</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0e2nb02">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <inputData id="InputData_1lbtf75" name="Alter" />
+  <inputData id="InputData_030ouxn" name="Einkommen" />
+  <inputData id="InputData_0c1kmli" name="Einkommen Vater" />
+  <inputData id="InputData_09hfkv7" name="Einkommen Mutter" />
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="Decision_1gz2006">
+        <dc:Bounds height="80" width="180" x="210" y="100" />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_0npwdc1" dmnElementRef="InputData_1lbtf75">
+        <dc:Bounds height="45" width="125" x="158" y="268" />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_0di5z94" dmnElementRef="InputData_030ouxn">
+        <dc:Bounds height="45" width="125" x="328" y="238" />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_15eddiv" dmnElementRef="InputData_0c1kmli">
+        <dc:Bounds height="45" width="125" x="478" y="188" />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_053jllt" dmnElementRef="InputData_09hfkv7">
+        <dc:Bounds height="45" width="125" x="518" y="98" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_0o7tolv" dmnElementRef="InformationRequirement_1nw9nfn">
+        <di:waypoint x="518" y="121" />
+        <di:waypoint x="410" y="140" />
+        <di:waypoint x="390" y="140" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="DMNEdge_14r1nzv" dmnElementRef="InformationRequirement_064pb7v">
+        <di:waypoint x="541" y="188" />
+        <di:waypoint x="345" y="200" />
+        <di:waypoint x="345" y="180" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="DMNEdge_1nib8ni" dmnElementRef="InformationRequirement_0egmpc9">
+        <di:waypoint x="391" y="238" />
+        <di:waypoint x="300" y="200" />
+        <di:waypoint x="300" y="180" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="DMNEdge_17olr81" dmnElementRef="InformationRequirement_1b3eyvm">
+        <di:waypoint x="221" y="268" />
+        <di:waypoint x="255" y="200" />
+        <di:waypoint x="255" y="180" />
+      </dmndi:DMNEdge>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

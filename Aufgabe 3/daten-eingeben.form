@@ -1,0 +1,41 @@
+{
+  "components": [
+    {
+      "label": "Alter",
+      "type": "number",
+      "id": "Field_0pqhirr",
+      "key": "Alter",
+      "defaultValue": -1
+    },
+    {
+      "label": "Einkommen",
+      "type": "number",
+      "id": "Field_1d617zy",
+      "key": "Einkommen",
+      "defaultValue": -1
+    },
+    {
+      "label": "Einkommen Mutter",
+      "type": "number",
+      "id": "Field_07v6mji",
+      "key": "EinkommenMutter",
+      "defaultValue": -1
+    },
+    {
+      "label": "Einkommen Vater",
+      "type": "number",
+      "id": "Field_1atzhhi",
+      "key": "EinkommenVater",
+      "defaultValue": -1
+    }
+  ],
+  "schemaVersion": 5,
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "de817ed"
+  },
+  "type": "default",
+  "id": "Form_79337d19-f5af-4880-9a18-f737cc7b4431",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.1.0"
+}

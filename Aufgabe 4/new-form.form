@@ -1,0 +1,35 @@
+{
+  "components": [
+    {
+      "label": "E-Mail",
+      "type": "textfield",
+      "id": "Field_08dsvaa",
+      "key": "Mail"
+    },
+    {
+      "label": "Land",
+      "type": "textfield",
+      "id": "Field_1dn6itj",
+      "key": "Land"
+    },
+    {
+      "label": "Anzahl Anhänger",
+      "type": "number",
+      "id": "Field_0hy8w81",
+      "key": "Anzahl",
+      "validate": {
+        "max": 4,
+        "min": 1
+      }
+    }
+  ],
+  "schemaVersion": 5,
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "de817ed"
+  },
+  "type": "default",
+  "id": "Form_44ac3d49-c298-4585-a868-c7377337999a",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.1.0"
+}

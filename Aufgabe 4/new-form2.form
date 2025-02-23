@@ -1,0 +1,29 @@
+{
+  "components": [
+    {
+      "values": [
+        {
+          "label": "Ja",
+          "value": "Ja"
+        },
+        {
+          "label": "Nein",
+          "value": "Nein"
+        }
+      ],
+      "label": "Zustimmen?",
+      "type": "select",
+      "id": "Field_1ft2uqp",
+      "key": "Zustimmen"
+    }
+  ],
+  "schemaVersion": 5,
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "de817ed"
+  },
+  "type": "default",
+  "id": "Form_ecc15903-da27-4444-a1f6-484cdee733d8",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.1.0"
+}
